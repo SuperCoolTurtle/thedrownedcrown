@@ -1,0 +1,433 @@
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+    min-height: 100%;
+}
+
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    background:
+        #e9e3d6;
+
+    color:
+        #211f1b;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+}
+
+
+button,
+select,
+textarea,
+input {
+    font: inherit;
+}
+
+
+button,
+select {
+    cursor: pointer;
+}
+
+
+.test-shell {
+    width: min(
+        900px,
+        calc(100% - 48px)
+    );
+
+    margin: 0 auto;
+
+    padding:
+        80px 0
+        120px;
+}
+
+
+.test-header {
+    margin-bottom:
+        42px;
+
+    text-align:
+        center;
+}
+
+
+.eyebrow {
+    display: block;
+
+    margin-bottom:
+        14px;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size:
+        11px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        0.24em;
+}
+
+
+.test-header h1 {
+    margin:
+        0 0
+        18px;
+
+    font-size:
+        clamp(
+            36px,
+            6vw,
+            64px
+        );
+
+    font-weight:
+        400;
+}
+
+
+.test-header p {
+    max-width:
+        560px;
+
+    margin:
+        0 auto;
+
+    line-height:
+        1.7;
+
+    color:
+        #625e55;
+}
+
+
+.test-panel {
+    padding:
+        42px;
+
+    background:
+        #f6f1e7;
+
+    border:
+        1px solid
+        rgba(
+            33,
+            31,
+            27,
+            0.16
+        );
+
+    box-shadow:
+        0 20px 60px
+        rgba(
+            33,
+            31,
+            27,
+            0.08
+        );
+}
+
+
+.status-area {
+    margin-bottom:
+        28px;
+
+    padding-bottom:
+        28px;
+
+    border-bottom:
+        1px solid
+        rgba(
+            33,
+            31,
+            27,
+            0.14
+        );
+}
+
+
+.status-area > span,
+.field > label {
+    display: block;
+
+    margin-bottom:
+        9px;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size:
+        10px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        0.16em;
+}
+
+
+.status-area strong {
+    display: block;
+
+    margin-bottom:
+        12px;
+
+    font-size:
+        24px;
+
+    font-weight:
+        400;
+}
+
+
+.status-area small {
+    display: block;
+
+    margin-top:
+        10px;
+
+    color:
+        #6b665c;
+}
+
+
+.loading-bar {
+    width:
+        100%;
+
+    height:
+        4px;
+
+    overflow:
+        hidden;
+
+    background:
+        rgba(
+            33,
+            31,
+            27,
+            0.12
+        );
+}
+
+
+.loading-bar-fill {
+    width:
+        0%;
+
+    height:
+        100%;
+
+    background:
+        #211f1b;
+
+    transition:
+        width 150ms ease;
+}
+
+
+.field {
+    margin-top:
+        30px;
+}
+
+
+.field select,
+.field textarea {
+    width:
+        100%;
+
+    border:
+        1px solid
+        rgba(
+            33,
+            31,
+            27,
+            0.25
+        );
+
+    background:
+        #fffdf7;
+
+    color:
+        #211f1b;
+}
+
+
+.field select {
+    min-height:
+        46px;
+
+    padding:
+        0 12px;
+}
+
+
+.field textarea {
+    padding:
+        18px;
+
+    resize:
+        vertical;
+
+    line-height:
+        1.7;
+
+    font-size:
+        17px;
+}
+
+
+.speed-row {
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        18px;
+}
+
+
+.speed-row input {
+    flex:
+        1;
+}
+
+
+.speed-row output {
+    width:
+        60px;
+
+    text-align:
+        right;
+}
+
+
+.actions {
+    display:
+        flex;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        10px;
+
+    margin-top:
+        30px;
+}
+
+
+.actions button,
+.primary-button {
+    min-height:
+        44px;
+
+    padding:
+        0 18px;
+
+    border:
+        1px solid
+        #211f1b;
+
+    background:
+        transparent;
+
+    color:
+        #211f1b;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size:
+        11px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        0.1em;
+}
+
+
+.primary-button {
+    background:
+        #211f1b;
+
+    color:
+        #f6f1e7;
+}
+
+
+button:disabled,
+select:disabled {
+    cursor:
+        not-allowed;
+
+    opacity:
+        0.45;
+}
+
+
+.generation-information {
+    margin-top:
+        22px;
+
+    color:
+        #625e55;
+
+    font-size:
+        14px;
+}
+
+
+audio {
+    width:
+        100%;
+
+    margin-top:
+        24px;
+}
+
+
+@media (
+    max-width: 650px
+) {
+
+    .test-shell {
+        width:
+            min(
+                100% - 24px,
+                900px
+            );
+
+        padding-top:
+            40px;
+    }
+
+
+    .test-panel {
+        padding:
+            24px;
+    }
+
+}
