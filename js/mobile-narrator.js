@@ -54,7 +54,10 @@ export const MOBILE_PIPER_VOICE_LABEL =
 */
 
 const PIPER_MODULE_URL =
-    "https://cdn.jsdelivr.net/npm/@realtimex/piper-tts-web@1.1.1/+esm";
+    new URL(
+        "./vendor/piper-tts-web.js",
+        import.meta.url
+    ).href;
 
 
 /* =========================================================
