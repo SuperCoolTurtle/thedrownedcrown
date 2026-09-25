@@ -51,6 +51,29 @@ const CHAPTERS = [
 
         previous: "prologue",
 
+        next: "chapter-02"
+    },
+
+
+    /* =====================================
+       CHAPTER TWO
+    ====================================== */
+
+    {
+        id: "chapter-02",
+
+        number: 2,
+
+        label: "Chapter Two",
+
+        pov: "Rava",
+
+        location: "Dentora",
+
+        file: "chapters/chapter-02.html",
+
+        previous: "chapter-01",
+
         next: null
     }
 
