@@ -625,13 +625,16 @@ button {
 .chapter-grid {
 
     display:
-        grid;
+        flex;
 
-    grid-template-columns:
-        repeat(
-            2,
-            1fr
-        );
+    width:
+        100%;
+
+    overflow-x:
+        auto;
+
+    overflow-y:
+        hidden;
 
     border-top:
         1px solid
@@ -640,10 +643,66 @@ button {
     border-bottom:
         1px solid
         var(--border);
+
+    scroll-behavior:
+        smooth;
+
+    scroll-snap-type:
+        x proximity;
+
+    overscroll-behavior-x:
+        contain;
+
+    -webkit-overflow-scrolling:
+        touch;
+
+    scrollbar-width:
+        thin;
+
+    scrollbar-color:
+        var(--accent)
+        transparent;
+}
+
+
+.chapter-grid::-webkit-scrollbar {
+
+    height:
+        6px;
+}
+
+
+.chapter-grid::-webkit-scrollbar-track {
+
+    background:
+        transparent;
+}
+
+
+.chapter-grid::-webkit-scrollbar-thumb {
+
+    background:
+        var(--accent);
+}
+
+
+.chapter-grid::-webkit-scrollbar-thumb:hover {
+
+    background:
+        var(--text);
 }
 
 
 .chapter-card {
+
+    min-width:
+        50%;
+
+    width:
+        50%;
+
+    flex:
+        0 0 50%;
 
     min-height:
         300px;
@@ -663,13 +722,9 @@ button {
     border-right:
         1px solid
         var(--border);
-}
 
-
-.chapter-card:last-child {
-
-    border-right:
-        none;
+    scroll-snap-align:
+        start;
 }
 
 
@@ -1409,28 +1464,37 @@ button {
     }
 
 
+    /* =====================================
+       MOBILE CHAPTER CAROUSEL
+    ====================================== */
+
     .chapter-grid {
 
-        grid-template-columns:
-            1fr;
+        scroll-snap-type:
+            x mandatory;
     }
 
 
     .chapter-card {
 
-        border-right:
-            none;
+        min-width:
+            88%;
 
-        border-bottom:
+        width:
+            88%;
+
+        flex:
+            0 0 88%;
+
+        border-right:
             1px solid
             var(--border);
-    }
-
-
-    .chapter-card:last-child {
 
         border-bottom:
             none;
+
+        scroll-snap-align:
+            start;
     }
 
 
