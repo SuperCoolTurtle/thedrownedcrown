@@ -74,6 +74,29 @@ const CHAPTERS = [
 
         previous: "chapter-01",
 
+        next: "chapter-03"
+    },
+
+
+    /* =====================================
+       CHAPTER THREE
+    ====================================== */
+
+    {
+        id: "chapter-03",
+
+        number: 3,
+
+        label: "Chapter Three",
+
+        pov: "Savaj",
+
+        location: "Tarkott",
+
+        file: "chapters/chapter-03.html",
+
+        previous: "chapter-02",
+
         next: null
     }
 
